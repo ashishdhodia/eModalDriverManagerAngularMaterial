@@ -1,0 +1,181 @@
+[
+  {
+    "driverName": "Freddie Osborne",
+    "driverEmail": "fosborne@outlook.com",
+    "driverPhone": "+1-650-513-0514",
+    "driverStatus": "active",
+    "driverDpPath": "assets/dp-01.png",
+    "driverId": 1,
+    "contractInfo": [
+      {
+        "contractDates": {
+          "beginDate": "01/29/2022",
+          "endDate": "12/29/2022"
+        }
+      },
+      {
+        "driverCertifications": [
+          { "cert": "Class A" },
+          { "cert": "Class B" },
+          { "cert": "Double" },
+          { "cert": "Hazardous" }
+        ]
+      },
+      {
+        "portsOfCall": [
+          { "cert": "Port of Oakland" },
+          { "cert": "Port of Baltimore" },
+          { "cert": "SC State Ports Authority" }
+        ]
+      }
+    ],
+    "licenseInfo": [
+      {
+        "twicCard": "true"
+      },
+      {
+        "licenses": [
+          {
+            "licensesNo": "E216814008329",
+            "state": "LA",
+            "country": "USA",
+            "expDate": "05/25/2026"
+          },
+          {
+            "licensesNo": "D323423435903",
+            "state": "NJ",
+            "country": "USA",
+            "expDate": "02/12/2025"
+          },
+          {
+            "licensesNo": "G336814312343",
+            "state": "LA",
+            "country": "USA",
+            "expDate": "02/03/2028"
+          },
+          {
+            "licensesNo": "F342342009392",
+            "state": "MD",
+            "country": "USA",
+            "expDate": "07/11/2024"
+          }
+        ]
+      }
+    ],
+    "companyInfo": [
+      {
+        "comapanyName": "PCI Logistics, CA",
+        "comapanyType": "Logistics Company",
+        "status": "active"
+      },
+      {
+        "comapanyName": "C-LA Trucking, BC",
+        "comapanyType": "Logistics Company",
+        "status": "active"
+      },
+      {
+        "comapanyName": "CSX Intermodal Inc, NH",
+        "comapanyType": "Logistics Company",
+        "status": "active"
+      },
+      {
+        "comapanyName": "AAA Transit, AR",
+        "comapanyType": "Logistics Company",
+        "status": "inActive"
+      }
+    ]
+  },
+  {
+    "driverName": "Jimmy Rodriguez",
+    "driverEmail": "jrodriguez@outlook.com",
+    "driverPhone": "+1-613-934-4930",
+    "driverStatus": "inActive",
+    "driverDpPath": "assets/dp-02.png",
+    "driverId": 2,
+    "contractInfo": [
+      {
+        "contractDates": {
+          "beginDate": "12/29/2022",
+          "endDate": "12/29/2022"
+        }
+      },
+      {
+        "driverCertifications": [
+          { "cert": "Class A" },
+          { "cert": "Class B" },
+          { "cert": "Class C" },
+          { "cert": "Double" },
+          { "cert": "Hazardous}" }
+        ]
+      },
+      {
+        "portsOfCall": [
+          { "cert": "Port of Baltimore" },
+          { "cert": "Port of Oakland" },
+          { "cert": "SC State Ports Authority" }
+        ]
+      }
+    ],
+    "licenseInfo": [
+      {
+        "twicCard": "true"
+      },
+      {
+        "licenses": [
+          {
+            "licensesNo": "F342342009392",
+            "state": "MD",
+            "country": "USA",
+            "expDate": "07/11/2024"
+          },
+          {
+            "licensesNo": "G336814312343",
+            "state": "LA",
+            "country": "USA",
+            "expDate": "02/03/2028"
+          },
+          {
+            "licensesNo": "D323423435903",
+            "state": "NJ",
+            "country": "USA",
+            "expDate": "02/12/2025"
+          },
+          {
+            "licensesNo": "E216814008329",
+            "state": "LA",
+            "country": "USA",
+            "expDate": "05/25/2026"
+          },
+          {
+            "licensesNo": "F216814988329",
+            "state": "TX",
+            "country": "USA",
+            "expDate": "05/25/2027"
+          }
+        ]
+      }
+    ],
+    "companyInfo": [
+      {
+        "comapanyName": "PCI Logistics, CA",
+        "comapanyType": "Logistics Company",
+        "status": "active"
+      },
+      {
+        "comapanyName": "C-LA Trucking, BC",
+        "comapanyType": "Logistics Company",
+        "status": "inActive"
+      },
+      {
+        "comapanyName": "CSX Intermodal Inc, NH",
+        "comapanyType": "Logistics Company",
+        "status": "inActive"
+      },
+      {
+        "comapanyName": "AAA Transit, AR",
+        "comapanyType": "Logistics Company",
+        "status": "active"
+      }
+    ]
+  }
+]

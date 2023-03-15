@@ -1,0 +1,129 @@
+<!-- AppHeader -->
+<header class="e-app-header">
+  <div class="e-app-header-content">
+    <!-- Content on Left -->
+    <div class="e-d-flex e-gap-xy e-align-items-center">
+      <i class="material-icons-outlined">menu</i>
+      <img src="../../assets/eModal-Logo.svg" alt="" />
+      <h5>App Header</h5>
+    </div>
+
+    <!-- Content on right -->
+    <div class="e-d-flex e-gap-xy secondary-text-color">
+      <i class="material-icons-outlined">notifications</i>
+      <i class="material-icons-outlined">shopping_cart</i>
+      <i class="material-icons-outlined">settings</i>
+      <i class="material-icons-outlined">help_outline</i>
+      <i class="material-icons-outlined">account_circle</i>
+    </div>
+  </div>
+</header>
+
+<!-- Breadcrumbs -->
+<div class="e-breadcrumbs">
+  <div class="e-breadcrumbs-content">
+    <h6>Breadcrumbs</h6>
+  </div>
+</div>
+
+<!-- Actions Bar -->
+<div class="e-actions-bar">
+  <section>
+    <div class="example-button-row">
+      <button mat-raised-button class="e-button-primary" (click)="openDialog()">
+        Add Driver
+      </button>
+    </div>
+  </section>
+</div>
+
+<!-- Main Content Wrapper -->
+<div class="e-main-content-wrapper">
+  <!-- List Panel -->
+  <div class="e-list-panel">
+    <!-- Search & Sort Bar -->
+    <div class="e-search-sort-bar e-w-100"></div>
+
+    <!-- List Group  -->
+    <ul class="e-list-group e-w-100">
+      <li class="e-list-item e-d-flex e-justify-between e-driver-profile">
+        <div class="e-d-flex e-gap-xy">
+          <img src="../../assets/dp-01.png" alt="" class="img-thumbnail" />
+          <div class="list-text">
+            <h2 class="title">Freddie Osborne</h2>
+            <p class="sub-title">fosborne@outlook.com</p>
+            <p class="sub-title">+1-650-513-0514</p>
+          </div>
+        </div>
+        <div class="badge">
+          <mat-chip class="e-chip-active"> Active </mat-chip>
+        </div>
+      </li>
+      <li
+        class="e-list-item e-d-flex e-justify-between e-driver-profile"
+        *ngFor="let driver of originDriverObj"
+      >
+        <div class="e-d-flex e-gap-xy">
+          <img src="{{ driver.driverDpPath }}" alt="" class="img-thumbnail" />
+          <div class="list-text">
+            <h2 class="title">{{ driver.driverName }}</h2>
+            <p class="sub-title">{{ driver.driverEmail }}</p>
+            <p class="sub-title">{{ driver.driverPhone }}</p>
+          </div>
+        </div>
+        <div *ngIf="driver.driverStatus == 'active'" class="badge">
+          <mat-chip class="e-chip-active"> Active </mat-chip>
+        </div>
+        <div *ngIf="driver.driverStatus == 'inActive'" class="badge">
+          <mat-chip class="e-chip-inactive"> Inactive </mat-chip>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Details Panel -->
+  <div class="e-details-panel e-justify-between">
+    <!-- Driver Info - Header -->
+    <div class="e-details-header e-d-flex e-justify-between">
+      <!-- Image and Details -->
+      <div class="e-d-flex e-gap-xy">
+        <img
+          src="../../assets/dp-01.png"
+          alt=""
+          class="img-thumbnail-details"
+        />
+        <div class="list-text">
+          <h2 class="title">Freddie Osborne</h2>
+          <p class="sub-title">fosborne@outlook.com</p>
+          <p class="sub-title">+1-650-513-0514</p>
+        </div>
+        <!-- Badge -->
+        <div class="badge">
+          <mat-chip class="e-chip-active"> Active </mat-chip>
+        </div>
+      </div>
+
+
+      <section>
+        <div class="example-button-row">
+          <button
+            mat-raised-button
+            class="e-button-primary"
+            (click)="openDialog()"
+          >
+            Edit Driver
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <!-- Tabs - Contract, License and Company Info -->
+    <div class="e-details-tabs e-d-flex">
+      <mat-tab-group>
+        <mat-tab label="First">Content 1</mat-tab>
+        <mat-tab label="Second">Content 2</mat-tab>
+        <mat-tab label="Third">Content 3</mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+.e-chip-active {
+  background-color: #e0f1dd !important;
+  color: #1a8e07 !important;
+  border: 1px solid #1a8e07 !important;
+}
+
+.e-chip-inactive {
+  background-color: #f8f9fa !important;
+  color: #757575 !important;
+  border: 1px solid #bdbdbd !important;
+}
+
+.e-button-primary {
+  color: #fff !important;
+  background-color: #0088e8 !important;
+  border-color: #0088e8 !important;
+  border-radius: 4px !important;
+}
+
+.e-driver-profile {
+  background-color: white;
+  padding: 1rem !important;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+}
+
+.e-img {
+  border: 1px solid #dee2e6 !important;
+}
+
+.list-text {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+.e-details-tabs {
+  
+}
