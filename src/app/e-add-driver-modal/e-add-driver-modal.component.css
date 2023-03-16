@@ -1,0 +1,46 @@
+.e-dialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 32px;
+  background: #f5f5f5;
+  padding: 8px;
+}
+
+.e-dialog-content-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.e-content-row {
+  display: flex;
+  column-gap: 24px;
+  background: #eeeeee;
+  padding: 16px;
+}
+
+.e-content-input {
+  min-width: 400px;
+  height: 48px;
+  background: #cccccc;
+}
+
+.mat-form-field {
+  min-width: 400px !important;
+  height: 80px !important;
+  background: #cccccc;
+}
+
+.e-dialog-actions-bar {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  height: 36px;
+  background: #f5f5f5;
+}
+
+.dialog-title {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: start; */
+}

@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular/core'
 import { BehaviorSubject } from 'rxjs'
 import driverData from '../assets/driverData.json'
 
@@ -32,5 +32,12 @@ export class EDataServiceService {
 
   updateSearchInput(searchInput: any) {
     this.searchInput.next(searchInput)
+  }
+
+  addDriverData(driverData: any) {
+    let originDriverData = this.originDriverObj.getValue()
+    originDriverData.push(driverData)
+    this.originDriverObj.next(originDriverData)
+    console.log(this.originDriverObj)
   }
 }

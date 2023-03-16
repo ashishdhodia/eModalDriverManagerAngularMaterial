@@ -1,7 +1,58 @@
-<h1 mat-dialog-title>Add Driver</h1>
+<div mat-dialog-title class="dialog-title">
+  <h1>Add Driver</h1>
+  <button mat-icon-button aria-label="close dialog" mat-dialog-close>
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
 <div mat-dialog-content>
-  Details
+  <form [formGroup]="driverForm"  >
+    <div class="e-dialog-content-wrapper">
+      <div class="e-content-row e-d-flex">
+        <div class="e-content-input">
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="driverName" required />
+          </mat-form-field>
+        </div>
+        <div class="e-content-input">
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="driverEmail" required />
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="e-content-row e-d-flex">
+        <div class="e-content-input">
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Phone</mat-label>
+            <input matInput formControlName="driverPhone" required />
+          </mat-form-field>
+        </div>
+        <div class="e-content-input">
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Status</mat-label>
+            <mat-select
+              matNativeControl
+              formControlName="driverStatus"
+              required
+            >
+              <mat-option value="active">Active</mat-option>
+              <mat-option value="inActive">Inactive</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+  </form>
 </div>
-<div mat-dialog-actions>
+<mat-dialog-actions align="end">
   <button mat-button mat-dialog-close>Close</button>
-</div>
+  <button
+    mat-flat-button
+    mat-dialog-close
+    color="primary"
+    (click)="addDriver(driverForm)"
+  >
+    Add
+  </button>
+</mat-dialog-actions>
