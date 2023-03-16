@@ -51,13 +51,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { HttpClientModule } from '@angular/common/http'
 
-import { EAddDriverModalComponent } from './e-add-driver-modal/e-add-driver-modal.component'
+import { EAddDriverModalComponent } from './e-add-driver-modal/e-add-driver-modal.component';
+import { EDriverDetailsTopComponent } from './e-driver-details-top/e-driver-details-top.component';
+import { EDriverListComponent } from './e-driver-list/e-driver-list.component'
+import { SearchPipe } from './search.pipe';
+import { EDriverDetailsTabComponent } from './e-driver-details-tab/e-driver-details-tab.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     DriverManagerComponent,
-    EAddDriverModalComponent
+    EAddDriverModalComponent,
+    EDriverDetailsTopComponent,
+    EDriverListComponent,
+    SearchPipe,
+    EDriverDetailsTabComponent
   ],
   imports: [
     BrowserModule,

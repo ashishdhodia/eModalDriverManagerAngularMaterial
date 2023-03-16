@@ -1,0 +1,31 @@
+<div class="e-details-header e-d-flex e-justify-between">
+  <!-- Image and Details -->
+  <div class="e-d-flex e-gap-xy">
+    <img
+      src="{{ currentDriverDetails[0].driverDpPath }}"
+      alt="{{ currentDriverDetails[0].driverName }}"
+      class="img-thumbnail-details"
+    />
+    <div class="list-text">
+      <h2 class="title">{{ currentDriverDetails[0].driverName }}</h2>
+      <p class="sub-title">{{ currentDriverDetails[0].driverEmail }}</p>
+      <p class="sub-title">{{ currentDriverDetails[0].driverPhone }}</p>
+    </div>
+    <!-- Badge -->
+    <div *ngIf="currentDriverDetails[0].driverStatus == 'active'" class="badge">
+      <mat-chip class="e-chip-active"> Active </mat-chip>
+    </div>
+    <div
+      *ngIf="currentDriverDetails[0].driverStatus == 'inActive'"
+      class="badge"
+    >
+      <mat-chip class="e-chip-inactive"> Inactive </mat-chip>
+    </div>
+  </div>
+
+  <section>
+    <div class="example-button-row">
+      <button mat-raised-button class="e-button-primary">Edit Driver</button>
+    </div>
+  </section>
+</div>

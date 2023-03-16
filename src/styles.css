@@ -143,6 +143,7 @@ p {
 .e-list-group {
   display: flex;
   flex-direction: column;
+  /* width: 440px; */
 }
 
 .e-list-item {

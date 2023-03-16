@@ -1,0 +1,22 @@
+<ul class="e-list-group e-w-100">
+  <a
+    class="e-list-item e-d-flex e-justify-between e-driver-profile"
+    *ngFor="let driver of originDriverObj | search : searchInput; let i = index"
+    (click)="changeDetails(driver.driverId)"
+  >
+    <div class="e-d-flex e-gap-xy">
+      <img src="{{ driver.driverDpPath }}" alt="" class="img-thumbnail" />
+      <div class="list-text">
+        <h2 class="title">{{ driver.driverName }}</h2>
+        <p class="sub-title">{{ driver.driverEmail }}</p>
+        <p class="sub-title">{{ driver.driverPhone }}</p>
+      </div>
+    </div>
+    <div *ngIf="driver.driverStatus == 'active'" class="badge">
+      <mat-chip class="e-chip-active"> Active </mat-chip>
+    </div>
+    <div *ngIf="driver.driverStatus == 'inActive'" class="badge">
+      <mat-chip class="e-chip-inactive"> Inactive </mat-chip>
+    </div>
+  </a>
+</ul>
