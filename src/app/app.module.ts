@@ -55,7 +55,8 @@ import { EAddDriverModalComponent } from './e-add-driver-modal/e-add-driver-moda
 import { EDriverDetailsTopComponent } from './e-driver-details-top/e-driver-details-top.component';
 import { EDriverListComponent } from './e-driver-list/e-driver-list.component'
 import { SearchPipe } from './search.pipe';
-import { EDriverDetailsTabComponent } from './e-driver-details-tab/e-driver-details-tab.component'
+import { EDriverDetailsTabComponent } from './e-driver-details-tab/e-driver-details-tab.component';
+import { EDriverDetailsResponsiveComponent } from './e-driver-details-responsive/e-driver-details-responsive.component'
 
 @NgModule({
   declarations: [
@@ -65,7 +66,8 @@ import { EDriverDetailsTabComponent } from './e-driver-details-tab/e-driver-deta
     EDriverDetailsTopComponent,
     EDriverListComponent,
     SearchPipe,
-    EDriverDetailsTabComponent
+    EDriverDetailsTabComponent,
+    EDriverDetailsResponsiveComponent
   ],
   imports: [
     BrowserModule,

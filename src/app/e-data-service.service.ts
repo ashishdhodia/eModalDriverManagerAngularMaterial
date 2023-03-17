@@ -14,6 +14,9 @@ export class EDataServiceService {
   public selectedId = new BehaviorSubject<any>(2)
   public shareSelectedId = this.selectedId.asObservable()
 
+  public showDetails = new BehaviorSubject<any>(false)
+  public shareShowDetails = this.showDetails.asObservable()
+
   public currentDriverDetails = new BehaviorSubject<any>(driverData)
   public shareCurrentDriverDetails = this.currentDriverDetails.asObservable()
 
@@ -24,6 +27,10 @@ export class EDataServiceService {
 
   updateSelectedId(id: any) {
     this.selectedId.next(id)
+  }
+
+  updateShowDetails(flag: boolean) {
+    this.showDetails.next(flag)
   }
 
   updateCurrentDriverDetails(data: any) {

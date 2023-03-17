@@ -34,8 +34,24 @@
   row-gap: 8px;
 }
 
-a {
-  cursor: pointer;
-}
+@media screen and (min-width: 360px) and (max-width: 768px) {
+  .e-details-panel-responsive {
+    position: absolute;
+    left: 0px;
+    top: 64px;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+  }
 
-/* Burger Menu */
+  .e-details-close {
+    height: 50px;
+    width: 100%;
+    background-color: #b8b8b8;
+  }
+}
+@media screen and (min-width: 769px) {
+  .e-details-panel-responsive {
+    display: none;
+  }
+}

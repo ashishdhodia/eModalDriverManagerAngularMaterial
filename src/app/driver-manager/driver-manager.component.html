@@ -1,93 +1,78 @@
-<!-- AppHeader -->
-<header class="e-app-header">
-  <div class="e-app-header-content">
-    <!-- Content on Left -->
-    <div class="e-d-flex e-gap-xy e-align-items-center">
-      <i class="material-icons-outlined">menu</i>
-      <img src="../../assets/eModal-Logo.svg" alt="" />
-      <h5>App Header</h5>
+<ng-container *ngIf="showDetails == false || getScreenWidth > 768">
+  <!-- AppHeader -->
+  <header class="e-app-header">
+    <div class="e-app-header-content">
+      <!-- Content on Left -->
+      <div class="e-d-flex e-gap-xy e-align-items-center">
+        <i class="material-icons-outlined">menu</i>
+        <img src="../../assets/eModal-Logo.svg" alt="" />
+        <h5>App Header</h5>
+      </div>
+
+      <!-- Content on right -->
+      <div class="e-d-flex e-gap-xy secondary-text-color">
+        <i class="material-icons-outlined">notifications</i>
+        <i class="material-icons-outlined">shopping_cart</i>
+        <i class="material-icons-outlined">settings</i>
+        <i class="material-icons-outlined">help_outline</i>
+        <i class="material-icons-outlined">account_circle</i>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumbs -->
+  <div class="e-breadcrumbs">
+    <div class="e-breadcrumbs-content">
+      <h6>
+        <ol class="e-d-flex e-gap-xy">
+          <li>
+            <a>Home</a>
+          </li>
+          <li>
+            <i class="material-icons-outlined fs-5">chevron_right</i>
+          </li>
+          <li>
+            <a>Manage Drivers</a>
+          </li>
+        </ol>
+      </h6>
+    </div>
+  </div>
+
+  <!-- Actions Bar -->
+  <div class="e-actions-bar">
+    <section>
+      <div class="example-button-row">
+        <button
+          mat-raised-button
+          class="e-button-primary"
+          (click)="openDialog()"
+        >
+          Add Driver
+        </button>
+      </div>
+    </section>
+  </div>
+
+  <!-- Main Content Wrapper -->
+  <div class="e-main-content-wrapper">
+    <!-- List Panel -->
+    <div class="e-list-panel">
+      <!-- Search & Sort Bar -->
+      <div class="e-search-sort-bar e-w-100"></div>
+
+      <!-- List Group  -->
+      <app-e-driver-list class="e-list-group e-w-100"></app-e-driver-list>
     </div>
 
-    <!-- Content on right -->
-    <div class="e-d-flex e-gap-xy secondary-text-color">
-      <i class="material-icons-outlined">notifications</i>
-      <i class="material-icons-outlined">shopping_cart</i>
-      <i class="material-icons-outlined">settings</i>
-      <i class="material-icons-outlined">help_outline</i>
-      <i class="material-icons-outlined">account_circle</i>
+    <!-- Details Panel -->
+    <div class="e-details-panel e-justify-between">
+      <!-- Driver Info - Header -->
+      <app-e-driver-details-top></app-e-driver-details-top>
+
+      <!-- Tabs - Contract, License and Company Info -->
+      <app-e-driver-details-tab></app-e-driver-details-tab>
     </div>
   </div>
-</header>
-
-<!-- Breadcrumbs -->
-<div class="e-breadcrumbs">
-  <div class="e-breadcrumbs-content">
-    <h6>Breadcrumbs</h6>
-  </div>
-</div>
-
-<!-- Actions Bar -->
-<div class="e-actions-bar">
-  <section>
-    <div class="example-button-row">
-      <button mat-raised-button class="e-button-primary" (click)="openDialog()">
-        Add Driver
-      </button>
-    </div>
-  </section>
-</div>
-
-<!-- Main Content Wrapper -->
-<div class="e-main-content-wrapper">
-  <!-- List Panel -->
-  <div class="e-list-panel">
-    <!-- Search & Sort Bar -->
-    <div class="e-search-sort-bar e-w-100"></div>
-
-    <!-- List Group  -->
-    <app-e-driver-list></app-e-driver-list>
-    <!-- <ul class="e-list-group e-w-100">
-      <a class="e-list-item e-d-flex e-justify-between e-driver-profile">
-        <div class="e-d-flex e-gap-xy">
-          <img src="../../assets/dp-01.png" alt="" class="img-thumbnail" />
-          <div class="list-text">
-            <h2 class="title">Freddie Osborne</h2>
-            <p class="sub-title">fosborne@outlook.com</p>
-            <p class="sub-title">+1-650-513-0514</p>
-          </div>
-        </div>
-        <div class="badge">
-          <mat-chip class="e-chip-active"> Active </mat-chip>
-        </div>
-      </a>
-      <a
-        class="e-list-item e-d-flex e-justify-between e-driver-profile"
-        *ngFor="let driver of originDriverObj"
-      >
-        <div class="e-d-flex e-gap-xy">
-          <img src="{{ driver.driverDpPath }}" alt="" class="img-thumbnail" />
-          <div class="list-text">
-            <h2 class="title">{{ driver.driverName }}</h2>
-            <p class="sub-title">{{ driver.driverEmail }}</p>
-            <p class="sub-title">{{ driver.driverPhone }}</p>
-          </div>
-        </div>
-        <div *ngIf="driver.driverStatus == 'active'" class="badge">
-          <mat-chip class="e-chip-active"> Active </mat-chip>
-        </div>
-        <div *ngIf="driver.driverStatus == 'inActive'" class="badge">
-          <mat-chip class="e-chip-inactive"> Inactive </mat-chip>
-        </div>
-      </a>
-    </ul> -->
-  </div>
-
-  <!-- Details Panel -->
-  <div class="e-details-panel e-justify-between">
-    <!-- Driver Info - Header -->
-    <app-e-driver-details-top></app-e-driver-details-top>
-
-    <!-- Tabs - Contract, License and Company Info -->
-    <app-e-driver-details-tab></app-e-driver-details-tab>
-  </div>
-</div>
+</ng-container>
+<app-e-driver-details-responsive></app-e-driver-details-responsive>

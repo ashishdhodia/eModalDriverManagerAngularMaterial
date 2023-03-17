@@ -1,0 +1,167 @@
+<ng-container *ngIf="showDetails == true">
+  <div class="e-details-panel-responsive e-justify-between">
+    <div class="e-details-tabs e-d-flex">
+      <div class="e-details-close">
+        <button
+          mat-raised-button
+          class="e-button-primary"
+          (click)="closeDetails()"
+        >
+          Back
+        </button>
+      </div>
+    </div>
+
+    <!-- Driver Info - Header -->
+    <div class="e-details-header e-d-flex e-justify-between">
+      <!-- Image and Details -->
+      <div class="e-d-flex e-gap-xy">
+        <img
+          src="{{ currentDriverDetails[0].driverDpPath }}"
+          alt="{{ currentDriverDetails[0].driverName }}"
+          class="img-thumbnail-details"
+        />
+        <div class="list-text">
+          <h2 class="title">{{ currentDriverDetails[0].driverName }}</h2>
+          <p class="sub-title">{{ currentDriverDetails[0].driverEmail }}</p>
+          <p class="sub-title">{{ currentDriverDetails[0].driverPhone }}</p>
+        </div>
+        <!-- Badge -->
+        <div
+          *ngIf="currentDriverDetails[0].driverStatus == 'active'"
+          class="badge"
+        >
+          <mat-chip class="e-chip-active"> Active </mat-chip>
+        </div>
+        <div
+          *ngIf="currentDriverDetails[0].driverStatus == 'inActive'"
+          class="badge"
+        >
+          <mat-chip class="e-chip-inactive"> Inactive </mat-chip>
+        </div>
+      </div>
+
+      <section>
+        <div>
+          <button mat-raised-button class="e-button-primary">
+            Edit Driver
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <!-- Tabs - Contract, License and Company Info -->
+    <div class="e-details-tabs e-d-flex">
+      <mat-tab-group
+        mat-stretch-tabs="false"
+        mat-align-tabs="start"
+        dynamicHeight
+      >
+        <mat-tab class="mat-tab-label" label="Contract Info">
+          <div>
+            <div>
+              <i class="material-icons-outlined mx-2 text-secondary">today</i>
+              <span>CONTRACT DATES</span>
+            </div>
+            <div>
+              <div>
+                <span>Begin Date</span>
+                <span>12/29/2022</span>
+              </div>
+              <div>
+                <span>End Date</span>
+                <span>12/29/2022</span>
+              </div>
+            </div>
+            <hr />
+            <div>
+              <i class="material-icons-outlined mx-2 text-secondary"
+                >card_membership</i
+              >
+              <span>DRIVER CERTIFICATIONS</span>
+            </div>
+            <div>
+              <span>Class A</span>
+              <span>Class B</span>
+              <span>Class C</span>
+              <span>Hazardous</span>
+            </div>
+            <hr />
+            <div>
+              <i class="material-icons-outlined mx-2 text-secondary"
+                >directions_boat</i
+              >
+              <span>PORTS OF CALL</span>
+            </div>
+            <div>
+              <span>Port of Oakland</span>
+              <span>Port of Baltimore</span>
+              <span>SC State Ports Authority</span>
+            </div>
+          </div>
+        </mat-tab>
+        <mat-tab label="License Info">
+          <div>
+            <div>
+              <i class="material-icons-outlined mx-2 text-success"
+                >check_circle</i
+              >
+              <span>Driver has TWIC Card</span>
+            </div>
+
+            <hr />
+
+            <div>
+              <span>4 Licenses</span>
+            </div>
+
+            <!-- Each License -->
+            <ng-container>
+              <div>
+                <div>
+                  <span>E216814008329</span>
+                  <div>
+                    <span>Exp Dt</span>
+                    <span>05/25/2026</span>
+                  </div>
+                </div>
+                <div>
+                  <span>State</span>
+                  <span>LA</span>
+                </div>
+                <div>
+                  <span>Country</span>
+                  <span>US</span>
+                </div>
+              </div>
+              <hr />
+            </ng-container>
+          </div>
+        </mat-tab>
+        <mat-tab label="Company Info">
+          <div>
+            <!-- Each Company -->
+            <ng-container>
+              <div>
+                <div>
+                  <span>PCI Logistics, CA</span>
+                  <div>
+                    <span>Logistics Company</span>
+                  </div>
+                </div>
+
+                <div>
+                  <span>Active</span>
+                </div>
+                <div>
+                  <span>Inactive</span>
+                </div>
+              </div>
+              <hr />
+            </ng-container>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+</ng-container>

@@ -16,6 +16,7 @@ export class EDriverListComponent {
     this.selectedId = id
     this.dataService.updateSelectedId(id)
     this.dataService.updateCurrentDriverDetails(this.originDriverObj.filter((driver: any) => driver.driverId === id))
+    this.dataService.updateShowDetails(true)
   }
   
   ngOnInit(): void {
@@ -23,3 +24,5 @@ export class EDriverListComponent {
     this.dataService.shareOriginDriverObj.subscribe(x => this.originDriverObj = x)
   }
 }
+
+
