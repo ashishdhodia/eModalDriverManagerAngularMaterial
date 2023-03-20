@@ -6,7 +6,7 @@
       <div class="e-d-flex e-gap-xy e-align-items-center">
         <i class="material-icons-outlined">menu</i>
         <img src="../../assets/eModal-Logo.svg" alt="" />
-        <h5>App Header</h5>
+        <h5 class="e-app-title">Manage Drivers</h5>
       </div>
 
       <!-- Content on right -->
@@ -22,20 +22,10 @@
 
   <!-- Breadcrumbs -->
   <div class="e-breadcrumbs">
-    <div class="e-breadcrumbs-content">
-      <h6>
-        <ol class="e-d-flex e-gap-xy">
-          <li>
-            <a>Home</a>
-          </li>
-          <li>
-            <i class="material-icons-outlined fs-5">chevron_right</i>
-          </li>
-          <li>
-            <a>Manage Drivers</a>
-          </li>
-        </ol>
-      </h6>
+    <div class="e-breadcrumbs-content e-d-flex e-align-items-center">
+            <a href="">Home</a>
+            <i class="material-icons-outlined">chevron_right</i>
+            <span>Manage Drivers</span>
     </div>
   </div>
 
@@ -45,7 +35,7 @@
       <div class="example-button-row">
         <button
           mat-raised-button
-          class="e-button-primary"
+          class="e-btn-primary"
           (click)="openDialog()"
         >
           Add Driver

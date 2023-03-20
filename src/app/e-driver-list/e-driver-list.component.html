@@ -1,15 +1,14 @@
-<ul class="e-list-group e-w-100">
-  <a
-    class="e-list-item e-d-flex e-justify-between e-driver-profile"
-    *ngFor="let driver of originDriverObj | search : searchInput; let i = index"
-    (click)="changeDetails(driver.driverId)"
-  >
-    <div class="e-d-flex e-gap-xy">
+<ul class="e-list-group e-w-100 e-x-gap-12">
+  <li class="e-list-item e-d-flex e-justify-between e-driver-profile"
+  *ngFor="let driver of originDriverObj | search : searchInput; let i = index"
+  (click)="changeDetails(driver.driverId)">
+  <!-- <a> -->
+    <div class="e-d-flex e-gap-y-12">
       <img src="{{ driver.driverDpPath }}" alt="" class="img-thumbnail" />
-      <div class="list-text">
-        <h2 class="title">{{ driver.driverName }}</h2>
-        <p class="sub-title">{{ driver.driverEmail }}</p>
-        <p class="sub-title">{{ driver.driverPhone }}</p>
+      <div class="e-d-flex e-flex-column e-row-gap-12 e-list-content">
+        <h2 class="e-list-title">{{ driver.driverName }}</h2>
+        <p class="e-list-sub-title">{{ driver.driverEmail }}</p>
+        <p class="e-list-text">{{ driver.driverPhone }}</p>
       </div>
     </div>
     <div *ngIf="driver.driverStatus == 'active'" class="badge">
@@ -18,5 +17,6 @@
     <div *ngIf="driver.driverStatus == 'inActive'" class="badge">
       <mat-chip class="e-chip-inactive"> Inactive </mat-chip>
     </div>
-  </a>
+  <!-- </a> -->
+</li>
 </ul>
