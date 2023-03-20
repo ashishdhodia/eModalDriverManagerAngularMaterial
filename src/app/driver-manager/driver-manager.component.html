@@ -23,9 +23,9 @@
   <!-- Breadcrumbs -->
   <div class="e-breadcrumbs">
     <div class="e-breadcrumbs-content e-d-flex e-align-items-center">
-            <a href="">Home</a>
-            <i class="material-icons-outlined">chevron_right</i>
-            <span>Manage Drivers</span>
+      <a href="">Home</a>
+      <i class="material-icons-outlined">chevron_right</i>
+      <span>Manage Drivers</span>
     </div>
   </div>
 
@@ -33,11 +33,7 @@
   <div class="e-actions-bar">
     <section>
       <div class="example-button-row">
-        <button
-          mat-raised-button
-          class="e-btn-primary"
-          (click)="openDialog()"
-        >
+        <button mat-raised-button class="e-btn-primary" (click)="openDialog()">
           Add Driver
         </button>
       </div>
@@ -49,7 +45,7 @@
     <!-- List Panel -->
     <div class="e-list-panel">
       <!-- Search & Sort Bar -->
-      <div class="e-search-sort-bar e-w-100"></div>
+      <app-e-search-bar class="e-w-100"></app-e-search-bar>
 
       <!-- List Group  -->
       <app-e-driver-list class="e-list-group e-w-100"></app-e-driver-list>

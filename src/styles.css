@@ -325,7 +325,7 @@ a{
   display: flex;
   justify-content: space-between;
   background: #b6e2ff;
-  height: 32px;
+  /* height: 32px !important; */
   border:1px solid var(--border-color);
 }
 

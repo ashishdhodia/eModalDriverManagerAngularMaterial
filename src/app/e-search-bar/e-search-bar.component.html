@@ -1,0 +1,13 @@
+<mat-form-field class="e-w-100">
+  <mat-label>Search</mat-label>
+  <input
+    matInput
+    [(ngModel)]="searchInput"
+    [ngModelOptions]="{ standalone: true }"
+    (keyup)="changeSearchInput()"
+    type="text"
+  />
+  <button matSuffix mat-icon-button aria-label="Clear">
+    <mat-icon>search</mat-icon>
+  </button>
+</mat-form-field>
