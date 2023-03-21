@@ -1,56 +1,85 @@
 <div class="e-details-tabs e-d-flex"></div>
 <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start" dynamicHeight>
-  <mat-tab class="mat-tab-label" label="Contract Info">
-    <div>
-      <div>
-        <i class="material-icons-outlined mx-2 text-secondary">today</i>
-        <span>CONTRACT DATES</span>
-      </div>
-      <div>
-        <div>
-          <span>Begin Date</span>
-          <span>12/29/2022</span>
+
+  <!-- Contract Info Tab -->
+
+  <mat-tab class="e-mat-tab-label" label="Contract Info">
+    
+    <div class="e-tabs-content e-row-column-gap">
+      
+      <div class="e-section-icon-title e-border-bottom">
+
+        <div class="e-d-flex e-row-column-gap e-align-items-center">
+          <i class="material-icons-outlined e-details-section-title">today</i>
+          <span class="e-details-section-title">Contract Dates</span>
         </div>
-        <div>
-          <span>End Date</span>
-          <span>12/29/2022</span>
+        <img class="e-mb-16 e-tab-section-contract-arrow" src="../assets/contract-arrow.png" alt="Contract Arrow">
+        <div class="e-d-flex e-column-gap-48 e-tab-section-content">
+          <div class="e-d-flex e-flex-column e-row-gap-6">
+            <span class="e-label">Begin Date</span>
+            <span class="e-value">12/29/2022</span>
+          </div>
+          <div class="e-d-flex e-flex-column e-row-gap-6">
+            <span class="e-label">End Date</span>
+            <span class="e-value">12/29/2022</span>
+          </div>
+  
         </div>
+
       </div>
-      <hr />
-      <div>
-        <i class="material-icons-outlined mx-2 text-secondary"
-          >card_membership</i
-        >
-        <span>DRIVER CERTIFICATIONS</span>
+      
+
+    <!-- ----------------- -->
+
+    <div class="e-section-icon-title e-border-bottom"> 
+      <div class="e-d-flex e-row-column-gap e-align-items-center">
+        <i class="material-icons-outlined mx-2 e-details-section-title">card_membership</i>
+        <span class="e-details-section-title">Driver Certifications</span>
       </div>
-      <div>
-        <span>Class A</span>
-        <span>Class B</span>
-        <span>Class C</span>
-        <span>Hazardous</span>
+      <div class="e-d-flex e-row-column-gap e-tab-section-content">
+        
+        <mat-chip class="e-chip-neutral"> Class A </mat-chip>
+        <mat-chip class="e-chip-neutral"> Class B </mat-chip>
+        <mat-chip class="e-chip-neutral"> Class C </mat-chip>
+        <mat-chip class="e-chip-neutral"> Hazardous</mat-chip>
+       
+    
       </div>
-      <hr />
-      <div>
-        <i class="material-icons-outlined mx-2 text-secondary"
+    </div> 
+      
+      <!-- ----------------- -->
+
+
+    <div class="e-section-icon-title ">   
+      <div class="e-d-flex e-row-column-gap e-align-items-center">
+        <i class="material-icons-outlined mx-2 e-details-section-title"
           >directions_boat</i
         >
-        <span>PORTS OF CALL</span>
-      </div>
-      <div>
-        <span>Port of Oakland</span>
-        <span>Port of Baltimore</span>
-        <span>SC State Ports Authority</span>
-      </div>
-    </div>
-  </mat-tab>
-  <mat-tab label="License Info">
-    <div>
-      <div>
-        <i class="material-icons-outlined mx-2 text-success">check_circle</i>
-        <span>Driver has TWIC Card</span>
+        <span class="e-details-section-title">Ports of Call</span>
       </div>
 
-      <hr />
+      <div class="e-d-flex e-row-column-gap e-tab-section-content">
+        
+        <mat-chip class="e-chip-neutral"> Port of Oakland </mat-chip>
+        <mat-chip class="e-chip-neutral"> Port of Baltimore </mat-chip>
+        <mat-chip class="e-chip-neutral"> SC State Ports Authority </mat-chip>
+  
+      </div>
+      
+    </div>
+  </div>
+  </mat-tab>
+
+  <!-- License Info Tab -->
+
+  <mat-tab label="License Info">
+    <div class="e-tabs-content">
+      <div class="e-d-flex e-align-items-center e-row-column-gap e-border-bottom e-section-title">
+        <i class="material-icons-outlined mx-2 success-color">check_circle</i>
+        <span class="e-text">Driver has TWIC Card</span>
+      </div>
+
+      <!-- ----------------- -->
 
       <div>
         <span>4 Licenses</span>
@@ -75,10 +104,15 @@
             <span>US</span>
           </div>
         </div>
-        <hr />
+        
+        <!-- ----------------- -->
+
       </ng-container>
     </div>
   </mat-tab>
+
+  <!-- Company Info Tab -->
+
   <mat-tab label="Company Info">
     <div>
       <!-- Each Company -->
@@ -98,7 +132,9 @@
             <span>Inactive</span>
           </div>
         </div>
-        <hr />
+        
+        <!-- ----------------- -->
+
       </ng-container>
     </div>
   </mat-tab>

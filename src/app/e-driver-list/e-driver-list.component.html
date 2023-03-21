@@ -1,14 +1,14 @@
-<ul class="e-list-group e-w-100 e-x-gap-12">
+<ul class="e-list-group e-w-100 e-column-gap-12">
   <li class="e-list-item e-d-flex e-justify-between e-driver-profile"
   *ngFor="let driver of originDriverObj | search : searchInput; let i = index"
   (click)="changeDetails(driver.driverId)">
   <!-- <a> -->
-    <div class="e-d-flex e-gap-y-12">
+    <div class="e-d-flex e-column-gap-12">
       <img src="{{ driver.driverDpPath }}" alt="" class="img-thumbnail" />
-      <div class="e-d-flex e-flex-column e-row-gap-12 e-list-content">
-        <h2 class="e-list-title">{{ driver.driverName }}</h2>
-        <p class="e-list-sub-title">{{ driver.driverEmail }}</p>
-        <p class="e-list-text">{{ driver.driverPhone }}</p>
+      <div class="e-d-flex e-flex-column e-row-gap-6 e-list-content">
+        <h2 class="e-title">{{ driver.driverName }}</h2>
+        <p class="e-sub-title">{{ driver.driverEmail }}</p>
+        <p class="e-sub-title">{{ driver.driverPhone }}</p>
       </div>
     </div>
     <div *ngIf="driver.driverStatus == 'active'" class="badge">

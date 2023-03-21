@@ -3,14 +3,14 @@
   <header class="e-app-header">
     <div class="e-app-header-content">
       <!-- Content on Left -->
-      <div class="e-d-flex e-gap-xy e-align-items-center">
+      <div class="e-d-flex e-row-column-gap e-align-items-center">
         <i class="material-icons-outlined">menu</i>
         <img src="../../assets/eModal-Logo.svg" alt="" />
         <h5 class="e-app-title">Manage Drivers</h5>
       </div>
 
       <!-- Content on right -->
-      <div class="e-d-flex e-gap-xy secondary-text-color">
+      <div class="e-d-flex e-row-column-gap secondary-text-color">
         <i class="material-icons-outlined">notifications</i>
         <i class="material-icons-outlined">shopping_cart</i>
         <i class="material-icons-outlined">settings</i>
@@ -33,7 +33,7 @@
   <div class="e-actions-bar">
     <section>
       <div class="example-button-row">
-        <button mat-raised-button class="e-btn-primary" (click)="openDialog()">
+        <button mat-raised-button class="e-btn e-btn-primary" (click)="openDialog()">
           Add Driver
         </button>
       </div>
